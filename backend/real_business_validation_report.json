@@ -1,0 +1,1428 @@
+{
+  "timestamp": "2026-09-26T05:29:17.474414+00:00",
+  "query": "futsal arenas",
+  "location": "Goa, India",
+  "target_business_count": 10,
+  "phases": {
+    "phase_1_discovery": {
+      "total_candidates": 21,
+      "newly_registered": 20,
+      "exact_duplicates": 1,
+      "possible_duplicates": 1,
+      "commercial_candidates_count": 12,
+      "institutional_candidates_count": 8,
+      "unknown_candidates_count": 0,
+      "target_commercial_count": 10,
+      "errors": []
+    },
+    "phase_2_identity": [
+      {
+        "business_id": "db9ff252-5f08-43d9-9833-ca3250c6f4bb",
+        "business_name": "Nagoa Futsal Arena",
+        "location": "Nagoa, Goa, IN",
+        "provider": "OPENSTREETMAP",
+        "provider_id": "1268416177",
+        "canonical_domain": null,
+        "entity_type": "COMMERCIAL_VENUE",
+        "entity_type_confidence": 0.9,
+        "sales_eligibility_state": "SALES_ELIGIBLE",
+        "identity_confidence": 1.0,
+        "deduplication_status": "CANONICAL"
+      },
+      {
+        "business_id": "12e32af7-c1ee-49b0-824b-fc045bcdf490",
+        "business_name": "Agnel Futsal Arena",
+        "location": "Assagao, Goa, IN",
+        "provider": "LOCAL_DIRECTORY",
+        "provider_id": "loc-dir-goa-agnel",
+        "canonical_domain": "playo.co",
+        "entity_type": "COMMERCIAL_VENUE",
+        "entity_type_confidence": 0.9,
+        "sales_eligibility_state": "SALES_ELIGIBLE",
+        "identity_confidence": 1.0,
+        "deduplication_status": "CANONICAL"
+      },
+      {
+        "business_id": "9a214fa9-a31a-4cc7-9e2d-d66d5d1b1c0d",
+        "business_name": "Penha De Franca Futsal Arena",
+        "location": "Porvorim, Goa, IN",
+        "provider": "LOCAL_DIRECTORY",
+        "provider_id": "loc-dir-goa-penha",
+        "canonical_domain": "playo.co",
+        "entity_type": "COMMERCIAL_VENUE",
+        "entity_type_confidence": 0.9,
+        "sales_eligibility_state": "SALES_ELIGIBLE",
+        "identity_confidence": 1.0,
+        "deduplication_status": "CANONICAL"
+      },
+      {
+        "business_id": "34edd229-f551-41ae-8c19-f6241083df8a",
+        "business_name": "DENGOA Multisports Arena",
+        "location": "Ribandar, Goa, IN",
+        "provider": "LOCAL_DIRECTORY",
+        "provider_id": "loc-dir-goa-dengoa",
+        "canonical_domain": "playo.co",
+        "entity_type": "COMMERCIAL_VENUE",
+        "entity_type_confidence": 0.9,
+        "sales_eligibility_state": "SALES_ELIGIBLE",
+        "identity_confidence": 1.0,
+        "deduplication_status": "CANONICAL"
+      },
+      {
+        "business_id": "380e4a04-e179-4e82-8bf6-a0354e14f0cb",
+        "business_name": "Galacticos Sports Club",
+        "location": "Porvorim, Goa, IN",
+        "provider": "LOCAL_DIRECTORY",
+        "provider_id": "loc-dir-goa-galacticos",
+        "canonical_domain": "playo.co",
+        "entity_type": "SPORTS_CLUB",
+        "entity_type_confidence": 0.85,
+        "sales_eligibility_state": "SALES_ELIGIBLE",
+        "identity_confidence": 1.0,
+        "deduplication_status": "CANONICAL"
+      },
+      {
+        "business_id": "ccba5f73-02d8-4832-98c8-0c237c4ec971",
+        "business_name": "Rosa Arena",
+        "location": "Dabolim, Goa, IN",
+        "provider": "LOCAL_DIRECTORY",
+        "provider_id": "loc-dir-goa-rosa",
+        "canonical_domain": "justdial.com",
+        "entity_type": "COMMERCIAL_VENUE",
+        "entity_type_confidence": 0.9,
+        "sales_eligibility_state": "SALES_ELIGIBLE",
+        "identity_confidence": 1.0,
+        "deduplication_status": "CANONICAL"
+      },
+      {
+        "business_id": "71cf0ffe-e0d3-41e9-82f7-3bd873294e7e",
+        "business_name": "Camp Souza Futsal Turf",
+        "location": "Camorlim, Goa, IN",
+        "provider": "LOCAL_DIRECTORY",
+        "provider_id": "loc-dir-goa-campsouza",
+        "canonical_domain": "playo.co",
+        "entity_type": "COMMERCIAL_VENUE",
+        "entity_type_confidence": 0.9,
+        "sales_eligibility_state": "SALES_ELIGIBLE",
+        "identity_confidence": 1.0,
+        "deduplication_status": "CANONICAL"
+      },
+      {
+        "business_id": "e655745f-5297-4af4-8bf7-45254816efdd",
+        "business_name": "Don Bosco Oratory Futsal Turf",
+        "location": "Panaji, Goa, IN",
+        "provider": "LOCAL_DIRECTORY",
+        "provider_id": "loc-dir-goa-donbosco",
+        "canonical_domain": "playo.co",
+        "entity_type": "COMMERCIAL_VENUE",
+        "entity_type_confidence": 0.85,
+        "sales_eligibility_state": "SALES_ELIGIBLE",
+        "identity_confidence": 1.0,
+        "deduplication_status": "CANONICAL"
+      },
+      {
+        "business_id": "e6927815-3255-4588-9874-64110e95f8d5",
+        "business_name": "Kitex Kick-off Arena",
+        "location": "Talaulim, Goa, IN",
+        "provider": "LOCAL_DIRECTORY",
+        "provider_id": "loc-dir-goa-kitex",
+        "canonical_domain": "playo.co",
+        "entity_type": "COMMERCIAL_VENUE",
+        "entity_type_confidence": 0.9,
+        "sales_eligibility_state": "SALES_ELIGIBLE",
+        "identity_confidence": 1.0,
+        "deduplication_status": "CANONICAL"
+      },
+      {
+        "business_id": "08a7ecf2-a1f9-43be-837a-3c4ae2024b17",
+        "business_name": "L D Silva Arena & ATB Ground",
+        "location": "Benaulim, Goa, IN",
+        "provider": "LOCAL_DIRECTORY",
+        "provider_id": "loc-dir-goa-ldsilva",
+        "canonical_domain": "justdial.com",
+        "entity_type": "COMMERCIAL_VENUE",
+        "entity_type_confidence": 0.9,
+        "sales_eligibility_state": "SALES_ELIGIBLE",
+        "identity_confidence": 1.0,
+        "deduplication_status": "CANONICAL"
+      }
+    ],
+    "phase_3_contacts": {
+      "db9ff252-5f08-43d9-9833-ca3250c6f4bb": [],
+      "12e32af7-c1ee-49b0-824b-fc045bcdf490": [
+        {
+          "email": "sports@agnelgoa.edu.in",
+          "canonical_email": "sports@agnelgoa.edu.in",
+          "verification_tier": "FAILED_VERIFICATION",
+          "freshness": null,
+          "role": "General Contact"
+        }
+      ],
+      "9a214fa9-a31a-4cc7-9e2d-d66d5d1b1c0d": [
+        {
+          "email": "contact@penhadesports.org",
+          "canonical_email": "contact@penhadesports.org",
+          "verification_tier": "FAILED_VERIFICATION",
+          "freshness": null,
+          "role": "General Contact"
+        }
+      ],
+      "34edd229-f551-41ae-8c19-f6241083df8a": [
+        {
+          "email": "book@dengoasports.com",
+          "canonical_email": "book@dengoasports.com",
+          "verification_tier": "FAILED_VERIFICATION",
+          "freshness": null,
+          "role": "General Contact"
+        }
+      ],
+      "380e4a04-e179-4e82-8bf6-a0354e14f0cb": [
+        {
+          "email": "manager@galacticosgoa.com",
+          "canonical_email": "manager@galacticosgoa.com",
+          "verification_tier": "FAILED_VERIFICATION",
+          "freshness": null,
+          "role": "General Contact"
+        }
+      ],
+      "ccba5f73-02d8-4832-98c8-0c237c4ec971": [
+        {
+          "email": "reservations@rosarena.in",
+          "canonical_email": "reservations@rosarena.in",
+          "verification_tier": "FAILED_VERIFICATION",
+          "freshness": null,
+          "role": "General Contact"
+        }
+      ],
+      "71cf0ffe-e0d3-41e9-82f7-3bd873294e7e": [
+        {
+          "email": "play@campsouza.com",
+          "canonical_email": "play@campsouza.com",
+          "verification_tier": "UNVERIFIED",
+          "freshness": null,
+          "role": "General Contact"
+        }
+      ],
+      "e655745f-5297-4af4-8bf7-45254816efdd": [
+        {
+          "email": "dbo.panaji@gmail.com",
+          "canonical_email": "dbo.panaji@gmail.com",
+          "verification_tier": "PROVIDER_VERIFIED",
+          "freshness": "2026-09-26T05:29:24.758579+00:00",
+          "role": "General Contact"
+        }
+      ],
+      "e6927815-3255-4588-9874-64110e95f8d5": [
+        {
+          "email": "kickoff@kitexgoa.com",
+          "canonical_email": "kickoff@kitexgoa.com",
+          "verification_tier": "FAILED_VERIFICATION",
+          "freshness": null,
+          "role": "General Contact"
+        }
+      ],
+      "08a7ecf2-a1f9-43be-837a-3c4ae2024b17": [
+        {
+          "email": "ldsilvasports@gmail.com",
+          "canonical_email": "ldsilvasports@gmail.com",
+          "verification_tier": "PROVIDER_VERIFIED",
+          "freshness": "2026-09-26T05:29:24.933911+00:00",
+          "role": "General Contact"
+        }
+      ]
+    },
+    "phase_4_research": {
+      "db9ff252-5f08-43d9-9833-ca3250c6f4bb": {
+        "run_id": "330a912f-45b1-45e0-a27a-c54bcee80ae1",
+        "status": "COMPLETED",
+        "evidence_count": 2,
+        "completed_at": "2026-09-26T05:29:25.024701+00:00"
+      },
+      "12e32af7-c1ee-49b0-824b-fc045bcdf490": {
+        "run_id": "db511a8c-18fd-4270-b454-3363c48df392",
+        "status": "COMPLETED",
+        "evidence_count": 5,
+        "completed_at": "2026-09-26T05:29:26.934383+00:00"
+      },
+      "9a214fa9-a31a-4cc7-9e2d-d66d5d1b1c0d": {
+        "run_id": "f0c519d7-f8a9-42ca-adb0-dbdf500caedc",
+        "status": "COMPLETED",
+        "evidence_count": 5,
+        "completed_at": "2026-09-26T05:29:28.711650+00:00"
+      },
+      "34edd229-f551-41ae-8c19-f6241083df8a": {
+        "run_id": "6b93ad48-75d6-4ac1-b3f3-63aed624b51b",
+        "status": "COMPLETED",
+        "evidence_count": 5,
+        "completed_at": "2026-09-26T05:29:30.761850+00:00"
+      },
+      "380e4a04-e179-4e82-8bf6-a0354e14f0cb": {
+        "run_id": "06caf6a9-8434-41a3-8356-293e25ee36b4",
+        "status": "COMPLETED",
+        "evidence_count": 5,
+        "completed_at": "2026-09-26T05:29:32.542432+00:00"
+      },
+      "ccba5f73-02d8-4832-98c8-0c237c4ec971": {
+        "run_id": "a574e754-ec34-447c-9b39-01d6ef276824",
+        "status": "COMPLETED",
+        "evidence_count": 2,
+        "completed_at": "2026-09-26T05:29:33.890809+00:00"
+      },
+      "71cf0ffe-e0d3-41e9-82f7-3bd873294e7e": {
+        "run_id": "3ed27d7f-4d0b-40e3-97b2-74b475c78fe0",
+        "status": "COMPLETED",
+        "evidence_count": 5,
+        "completed_at": "2026-09-26T05:29:35.858805+00:00"
+      },
+      "e655745f-5297-4af4-8bf7-45254816efdd": {
+        "run_id": "f2a22222-b92c-43c0-9b5b-66878095f7f4",
+        "status": "COMPLETED",
+        "evidence_count": 5,
+        "completed_at": "2026-09-26T05:29:37.768020+00:00"
+      },
+      "e6927815-3255-4588-9874-64110e95f8d5": {
+        "run_id": "82bdbb21-783e-46e0-b551-aace96a18cc8",
+        "status": "COMPLETED",
+        "evidence_count": 5,
+        "completed_at": "2026-09-26T05:29:39.740668+00:00"
+      },
+      "08a7ecf2-a1f9-43be-837a-3c4ae2024b17": {
+        "run_id": "9c8fa257-acff-403c-9132-1ed49d6f02b9",
+        "status": "COMPLETED",
+        "evidence_count": 2,
+        "completed_at": "2026-09-26T05:29:41.078546+00:00"
+      }
+    },
+    "phase_5_evidence": {
+      "total_facts": 24,
+      "total_inferences": 16,
+      "per_business": {
+        "db9ff252-5f08-43d9-9833-ca3250c6f4bb": {
+          "total": 2,
+          "facts_count": 1,
+          "inferences_count": 0,
+          "items": [
+            {
+              "id": "743ee0f7-1aa0-4aa2-a5fb-5d9d076cacfe",
+              "tier": "FACT",
+              "signal_type": "DOM_SELECTOR",
+              "presence": "NOT_OBSERVED",
+              "confidence": 0.7,
+              "observation": "Website not observed in discovery provider 'OPENSTREETMAP'. Broader website presence remains unobserved across secondary"
+            },
+            {
+              "id": "84ef173a-86b8-4498-812e-1b9bc42f397d",
+              "tier": "UNKNOWN",
+              "signal_type": "DOM_SELECTOR",
+              "presence": "NOT_OBSERVED",
+              "confidence": 0.5,
+              "observation": "Online booking could not be evaluated due to lack of an observed digital surface."
+            }
+          ]
+        },
+        "12e32af7-c1ee-49b0-824b-fc045bcdf490": {
+          "total": 5,
+          "facts_count": 3,
+          "inferences_count": 2,
+          "items": [
+            {
+              "id": "b64d2142-aba1-49c5-8a71-2b76f2770135",
+              "tier": "INFERENCE",
+              "signal_type": "DOM_SELECTOR",
+              "presence": "NOT_OBSERVED",
+              "confidence": 0.75,
+              "observation": "No booking widget in DOM. Text: 'none'"
+            },
+            {
+              "id": "81ebae5c-f5a8-49d8-b313-a2b9f794db75",
+              "tier": "INFERENCE",
+              "signal_type": "DOM_SELECTOR",
+              "presence": "NOT_OBSERVED",
+              "confidence": 0.85,
+              "observation": "No live chat widget scripts observed in DOM."
+            },
+            {
+              "id": "ada56b91-44af-4c18-93c7-75310dc0c7e6",
+              "tier": "FACT",
+              "signal_type": "META_TAG",
+              "presence": "PRESENT",
+              "confidence": 1.0,
+              "observation": "Meta viewport present: width=device-width, initial-scale=1"
+            },
+            {
+              "id": "3917f968-c933-46db-b352-269dcb160723",
+              "tier": "FACT",
+              "signal_type": "INFRA_PROBE",
+              "presence": "PRESENT",
+              "confidence": 1.0,
+              "observation": "HTTPS active: True"
+            },
+            {
+              "id": "10ec2241-bd4b-4b53-8c19-94cda82078c5",
+              "tier": "FACT",
+              "signal_type": "INFRA_PROBE",
+              "presence": "PRESENT",
+              "confidence": 0.9,
+              "observation": "TTFB latency measured at 180.0ms (FAST)"
+            }
+          ]
+        },
+        "9a214fa9-a31a-4cc7-9e2d-d66d5d1b1c0d": {
+          "total": 5,
+          "facts_count": 3,
+          "inferences_count": 2,
+          "items": [
+            {
+              "id": "4442f1d0-7c15-43ef-81ee-f95111551c57",
+              "tier": "INFERENCE",
+              "signal_type": "DOM_SELECTOR",
+              "presence": "NOT_OBSERVED",
+              "confidence": 0.75,
+              "observation": "No booking widget in DOM. Text: 'none'"
+            },
+            {
+              "id": "dad260fb-b738-4acb-b1c3-71bc2420510c",
+              "tier": "INFERENCE",
+              "signal_type": "DOM_SELECTOR",
+              "presence": "NOT_OBSERVED",
+              "confidence": 0.85,
+              "observation": "No live chat widget scripts observed in DOM."
+            },
+            {
+              "id": "f950c652-c4b3-4a06-9498-749b5157f2f1",
+              "tier": "FACT",
+              "signal_type": "META_TAG",
+              "presence": "PRESENT",
+              "confidence": 1.0,
+              "observation": "Meta viewport present: width=device-width, initial-scale=1"
+            },
+            {
+              "id": "62237e13-1b2b-4599-9ab4-ff5eb30a2aa4",
+              "tier": "FACT",
+              "signal_type": "INFRA_PROBE",
+              "presence": "PRESENT",
+              "confidence": 1.0,
+              "observation": "HTTPS active: True"
+            },
+            {
+              "id": "1edfc6c5-4a12-4b19-9858-a6e7c5ef6b35",
+              "tier": "FACT",
+              "signal_type": "INFRA_PROBE",
+              "presence": "PRESENT",
+              "confidence": 0.9,
+              "observation": "TTFB latency measured at 180.0ms (FAST)"
+            }
+          ]
+        },
+        "34edd229-f551-41ae-8c19-f6241083df8a": {
+          "total": 5,
+          "facts_count": 3,
+          "inferences_count": 2,
+          "items": [
+            {
+              "id": "01037e41-7761-4e40-ba27-3a941396f28a",
+              "tier": "INFERENCE",
+              "signal_type": "DOM_SELECTOR",
+              "presence": "NOT_OBSERVED",
+              "confidence": 0.75,
+              "observation": "No booking widget in DOM. Text: 'none'"
+            },
+            {
+              "id": "380a855b-4fd7-42dd-9cea-3fc62095cdb0",
+              "tier": "INFERENCE",
+              "signal_type": "DOM_SELECTOR",
+              "presence": "NOT_OBSERVED",
+              "confidence": 0.85,
+              "observation": "No live chat widget scripts observed in DOM."
+            },
+            {
+              "id": "a15584cc-d9ab-4fe5-bf7f-6695c3876f1a",
+              "tier": "FACT",
+              "signal_type": "META_TAG",
+              "presence": "PRESENT",
+              "confidence": 1.0,
+              "observation": "Meta viewport present: width=device-width, initial-scale=1"
+            },
+            {
+              "id": "c0954a65-c8cd-492c-90a2-298659c040e1",
+              "tier": "FACT",
+              "signal_type": "INFRA_PROBE",
+              "presence": "PRESENT",
+              "confidence": 1.0,
+              "observation": "HTTPS active: True"
+            },
+            {
+              "id": "1797cad2-4691-4eeb-b170-11d11326f91d",
+              "tier": "FACT",
+              "signal_type": "INFRA_PROBE",
+              "presence": "PRESENT",
+              "confidence": 0.9,
+              "observation": "TTFB latency measured at 180.0ms (FAST)"
+            }
+          ]
+        },
+        "380e4a04-e179-4e82-8bf6-a0354e14f0cb": {
+          "total": 5,
+          "facts_count": 3,
+          "inferences_count": 2,
+          "items": [
+            {
+              "id": "3e4ac7df-cccd-457d-ae38-75fc1562edb5",
+              "tier": "INFERENCE",
+              "signal_type": "DOM_SELECTOR",
+              "presence": "NOT_OBSERVED",
+              "confidence": 0.75,
+              "observation": "No booking widget in DOM. Text: 'none'"
+            },
+            {
+              "id": "a8256b41-c27f-4fed-8eca-bc069a77ac34",
+              "tier": "INFERENCE",
+              "signal_type": "DOM_SELECTOR",
+              "presence": "NOT_OBSERVED",
+              "confidence": 0.85,
+              "observation": "No live chat widget scripts observed in DOM."
+            },
+            {
+              "id": "a76a5d76-c8fa-4500-9d62-a746d8e9d45c",
+              "tier": "FACT",
+              "signal_type": "META_TAG",
+              "presence": "PRESENT",
+              "confidence": 1.0,
+              "observation": "Meta viewport present: width=device-width, initial-scale=1"
+            },
+            {
+              "id": "be974520-3766-4951-999a-228f9aa5134d",
+              "tier": "FACT",
+              "signal_type": "INFRA_PROBE",
+              "presence": "PRESENT",
+              "confidence": 1.0,
+              "observation": "HTTPS active: True"
+            },
+            {
+              "id": "0cf38b3e-6091-48b3-bbf9-cb05e22d3263",
+              "tier": "FACT",
+              "signal_type": "INFRA_PROBE",
+              "presence": "PRESENT",
+              "confidence": 0.9,
+              "observation": "TTFB latency measured at 180.0ms (FAST)"
+            }
+          ]
+        },
+        "ccba5f73-02d8-4832-98c8-0c237c4ec971": {
+          "total": 2,
+          "facts_count": 1,
+          "inferences_count": 1,
+          "items": [
+            {
+              "id": "59683ad5-9382-438b-92bb-14583b8862b3",
+              "tier": "INFERENCE",
+              "signal_type": "DOM_SELECTOR",
+              "presence": "UNKNOWN",
+              "confidence": 0.0,
+              "observation": "Website inaccessible or returned HTTP 403"
+            },
+            {
+              "id": "c354b97d-0ade-463d-a05c-cd7b1414d21b",
+              "tier": "FACT",
+              "signal_type": "INFRA_PROBE",
+              "presence": "UNKNOWN",
+              "confidence": 0.0,
+              "observation": "Server for https://justdial.com/Goa/Rosa-Arena-Dabolim unreachable or network timeout."
+            }
+          ]
+        },
+        "71cf0ffe-e0d3-41e9-82f7-3bd873294e7e": {
+          "total": 5,
+          "facts_count": 3,
+          "inferences_count": 2,
+          "items": [
+            {
+              "id": "d153e527-ceb6-4626-941e-0aeab98424d4",
+              "tier": "INFERENCE",
+              "signal_type": "DOM_SELECTOR",
+              "presence": "NOT_OBSERVED",
+              "confidence": 0.75,
+              "observation": "No booking widget in DOM. Text: 'none'"
+            },
+            {
+              "id": "105320f3-7442-4ee3-8ef2-9b2e19d414be",
+              "tier": "INFERENCE",
+              "signal_type": "DOM_SELECTOR",
+              "presence": "NOT_OBSERVED",
+              "confidence": 0.85,
+              "observation": "No live chat widget scripts observed in DOM."
+            },
+            {
+              "id": "a26d1677-9e0e-4da9-8558-df1547804681",
+              "tier": "FACT",
+              "signal_type": "META_TAG",
+              "presence": "PRESENT",
+              "confidence": 1.0,
+              "observation": "Meta viewport present: width=device-width, initial-scale=1"
+            },
+            {
+              "id": "b97d1b41-00b9-4ac0-8a76-bf481b9946f5",
+              "tier": "FACT",
+              "signal_type": "INFRA_PROBE",
+              "presence": "PRESENT",
+              "confidence": 1.0,
+              "observation": "HTTPS active: True"
+            },
+            {
+              "id": "15dc0d4d-2048-4e54-8031-554076c8b1c4",
+              "tier": "FACT",
+              "signal_type": "INFRA_PROBE",
+              "presence": "PRESENT",
+              "confidence": 0.9,
+              "observation": "TTFB latency measured at 180.0ms (FAST)"
+            }
+          ]
+        },
+        "e655745f-5297-4af4-8bf7-45254816efdd": {
+          "total": 5,
+          "facts_count": 3,
+          "inferences_count": 2,
+          "items": [
+            {
+              "id": "359d3bcd-3d7a-4630-89d1-56440808efd7",
+              "tier": "INFERENCE",
+              "signal_type": "DOM_SELECTOR",
+              "presence": "NOT_OBSERVED",
+              "confidence": 0.75,
+              "observation": "No booking widget in DOM. Text: 'none'"
+            },
+            {
+              "id": "e76bf97e-7e71-4532-a336-98561e842cfa",
+              "tier": "INFERENCE",
+              "signal_type": "DOM_SELECTOR",
+              "presence": "NOT_OBSERVED",
+              "confidence": 0.85,
+              "observation": "No live chat widget scripts observed in DOM."
+            },
+            {
+              "id": "f669d123-5d73-4df0-98b6-f271732ce87a",
+              "tier": "FACT",
+              "signal_type": "META_TAG",
+              "presence": "PRESENT",
+              "confidence": 1.0,
+              "observation": "Meta viewport present: width=device-width, initial-scale=1"
+            },
+            {
+              "id": "7ef6ae05-1a48-4358-b7cb-32ee1d4c945f",
+              "tier": "FACT",
+              "signal_type": "INFRA_PROBE",
+              "presence": "PRESENT",
+              "confidence": 1.0,
+              "observation": "HTTPS active: True"
+            },
+            {
+              "id": "2e4dc8c3-7f83-4dc9-9438-bb777eedbd83",
+              "tier": "FACT",
+              "signal_type": "INFRA_PROBE",
+              "presence": "PRESENT",
+              "confidence": 0.9,
+              "observation": "TTFB latency measured at 180.0ms (FAST)"
+            }
+          ]
+        },
+        "e6927815-3255-4588-9874-64110e95f8d5": {
+          "total": 5,
+          "facts_count": 3,
+          "inferences_count": 2,
+          "items": [
+            {
+              "id": "aab23a2e-b5d0-4c31-ac4a-e64196921418",
+              "tier": "INFERENCE",
+              "signal_type": "DOM_SELECTOR",
+              "presence": "NOT_OBSERVED",
+              "confidence": 0.75,
+              "observation": "No booking widget in DOM. Text: 'none'"
+            },
+            {
+              "id": "90b3cf6a-a561-4d1c-a1ab-6879bdc1c24c",
+              "tier": "INFERENCE",
+              "signal_type": "DOM_SELECTOR",
+              "presence": "NOT_OBSERVED",
+              "confidence": 0.85,
+              "observation": "No live chat widget scripts observed in DOM."
+            },
+            {
+              "id": "54e74c54-a8db-4100-8d41-e84fc551967c",
+              "tier": "FACT",
+              "signal_type": "META_TAG",
+              "presence": "PRESENT",
+              "confidence": 1.0,
+              "observation": "Meta viewport present: width=device-width, initial-scale=1"
+            },
+            {
+              "id": "6fa6539b-c042-4c1f-b674-4f1afed42fd5",
+              "tier": "FACT",
+              "signal_type": "INFRA_PROBE",
+              "presence": "PRESENT",
+              "confidence": 1.0,
+              "observation": "HTTPS active: True"
+            },
+            {
+              "id": "f3fc06c8-daa3-4401-a4d5-e72c49883683",
+              "tier": "FACT",
+              "signal_type": "INFRA_PROBE",
+              "presence": "PRESENT",
+              "confidence": 0.9,
+              "observation": "TTFB latency measured at 180.0ms (FAST)"
+            }
+          ]
+        },
+        "08a7ecf2-a1f9-43be-837a-3c4ae2024b17": {
+          "total": 2,
+          "facts_count": 1,
+          "inferences_count": 1,
+          "items": [
+            {
+              "id": "67ec447b-2376-439e-87f2-a01fcc797cba",
+              "tier": "INFERENCE",
+              "signal_type": "DOM_SELECTOR",
+              "presence": "UNKNOWN",
+              "confidence": 0.0,
+              "observation": "Website inaccessible or returned HTTP 403"
+            },
+            {
+              "id": "3c0398fa-85f5-41e6-900c-6aa23e20f841",
+              "tier": "FACT",
+              "signal_type": "INFRA_PROBE",
+              "presence": "UNKNOWN",
+              "confidence": 0.0,
+              "observation": "Server for https://justdial.com/Goa/L-D-Silva-Arena-Benaulim unreachable or network timeout."
+            }
+          ]
+        }
+      }
+    },
+    "phase_6_gaps": {
+      "total_gaps_detected": 0,
+      "per_business": {
+        "db9ff252-5f08-43d9-9833-ca3250c6f4bb": [],
+        "12e32af7-c1ee-49b0-824b-fc045bcdf490": [],
+        "9a214fa9-a31a-4cc7-9e2d-d66d5d1b1c0d": [],
+        "34edd229-f551-41ae-8c19-f6241083df8a": [],
+        "380e4a04-e179-4e82-8bf6-a0354e14f0cb": [],
+        "ccba5f73-02d8-4832-98c8-0c237c4ec971": [],
+        "71cf0ffe-e0d3-41e9-82f7-3bd873294e7e": [],
+        "e655745f-5297-4af4-8bf7-45254816efdd": [],
+        "e6927815-3255-4588-9874-64110e95f8d5": [],
+        "08a7ecf2-a1f9-43be-837a-3c4ae2024b17": []
+      }
+    },
+    "phase_7_opportunities": {
+      "total_opportunities": 8,
+      "per_business": {
+        "db9ff252-5f08-43d9-9833-ca3250c6f4bb": [
+          {
+            "hypothesis_id": "011abe55-f926-4340-89cc-00b0aa9b1687",
+            "category": "BOOKING_FRICTION_AFTER_HOURS_LEAKAGE",
+            "title": "After-Hours Booking & Scheduling Friction",
+            "confidence": 0.5,
+            "evidence_count": 2,
+            "solutions": [
+              {
+                "type": "NEEDS_DISCOVERY",
+                "title": "24/7 Automated Web & WhatsApp Appointment Engine",
+                "feasibility": 0.6
+              }
+            ],
+            "impact": {
+              "currency": "INR",
+              "midpoint": null
+            }
+          }
+        ],
+        "12e32af7-c1ee-49b0-824b-fc045bcdf490": [
+          {
+            "hypothesis_id": "d8bcccf5-ce76-45bf-aae4-2f252e17e8cc",
+            "category": "BOOKING_FRICTION_AFTER_HOURS_LEAKAGE",
+            "title": "After-Hours Booking & Scheduling Friction",
+            "confidence": 0.5,
+            "evidence_count": 2,
+            "solutions": [
+              {
+                "type": "NEEDS_DISCOVERY",
+                "title": "24/7 Automated Web & WhatsApp Appointment Engine",
+                "feasibility": 0.6
+              }
+            ],
+            "impact": {
+              "currency": "INR",
+              "midpoint": null
+            }
+          }
+        ],
+        "9a214fa9-a31a-4cc7-9e2d-d66d5d1b1c0d": [
+          {
+            "hypothesis_id": "c5b0aefa-a2c5-49eb-8027-14d92ec2a0b0",
+            "category": "BOOKING_FRICTION_AFTER_HOURS_LEAKAGE",
+            "title": "After-Hours Booking & Scheduling Friction",
+            "confidence": 0.5,
+            "evidence_count": 2,
+            "solutions": [
+              {
+                "type": "NEEDS_DISCOVERY",
+                "title": "24/7 Automated Web & WhatsApp Appointment Engine",
+                "feasibility": 0.6
+              }
+            ],
+            "impact": {
+              "currency": "INR",
+              "midpoint": null
+            }
+          }
+        ],
+        "34edd229-f551-41ae-8c19-f6241083df8a": [
+          {
+            "hypothesis_id": "83677669-88b4-466b-a9d2-b87bc9f5a80c",
+            "category": "BOOKING_FRICTION_AFTER_HOURS_LEAKAGE",
+            "title": "After-Hours Booking & Scheduling Friction",
+            "confidence": 0.5,
+            "evidence_count": 2,
+            "solutions": [
+              {
+                "type": "NEEDS_DISCOVERY",
+                "title": "24/7 Automated Web & WhatsApp Appointment Engine",
+                "feasibility": 0.6
+              }
+            ],
+            "impact": {
+              "currency": "INR",
+              "midpoint": null
+            }
+          }
+        ],
+        "380e4a04-e179-4e82-8bf6-a0354e14f0cb": [
+          {
+            "hypothesis_id": "de397de6-9f4e-46fd-a657-8745b4c294df",
+            "category": "BOOKING_FRICTION_AFTER_HOURS_LEAKAGE",
+            "title": "After-Hours Booking & Scheduling Friction",
+            "confidence": 0.5,
+            "evidence_count": 2,
+            "solutions": [
+              {
+                "type": "NEEDS_DISCOVERY",
+                "title": "24/7 Automated Web & WhatsApp Appointment Engine",
+                "feasibility": 0.6
+              }
+            ],
+            "impact": {
+              "currency": "INR",
+              "midpoint": null
+            }
+          }
+        ],
+        "ccba5f73-02d8-4832-98c8-0c237c4ec971": [],
+        "71cf0ffe-e0d3-41e9-82f7-3bd873294e7e": [
+          {
+            "hypothesis_id": "4756a09f-2d66-4d69-98f7-771a02f636d7",
+            "category": "BOOKING_FRICTION_AFTER_HOURS_LEAKAGE",
+            "title": "After-Hours Booking & Scheduling Friction",
+            "confidence": 0.5,
+            "evidence_count": 2,
+            "solutions": [
+              {
+                "type": "NEEDS_DISCOVERY",
+                "title": "24/7 Automated Web & WhatsApp Appointment Engine",
+                "feasibility": 0.6
+              }
+            ],
+            "impact": {
+              "currency": "INR",
+              "midpoint": null
+            }
+          }
+        ],
+        "e655745f-5297-4af4-8bf7-45254816efdd": [
+          {
+            "hypothesis_id": "687cad4f-4e52-4cd2-bcff-09c9fb60c0fa",
+            "category": "BOOKING_FRICTION_AFTER_HOURS_LEAKAGE",
+            "title": "After-Hours Booking & Scheduling Friction",
+            "confidence": 0.5,
+            "evidence_count": 2,
+            "solutions": [
+              {
+                "type": "NEEDS_DISCOVERY",
+                "title": "24/7 Automated Web & WhatsApp Appointment Engine",
+                "feasibility": 0.6
+              }
+            ],
+            "impact": {
+              "currency": "INR",
+              "midpoint": null
+            }
+          }
+        ],
+        "e6927815-3255-4588-9874-64110e95f8d5": [
+          {
+            "hypothesis_id": "7eed48a8-946c-48a6-bf45-871045c0bd69",
+            "category": "BOOKING_FRICTION_AFTER_HOURS_LEAKAGE",
+            "title": "After-Hours Booking & Scheduling Friction",
+            "confidence": 0.5,
+            "evidence_count": 2,
+            "solutions": [
+              {
+                "type": "NEEDS_DISCOVERY",
+                "title": "24/7 Automated Web & WhatsApp Appointment Engine",
+                "feasibility": 0.6
+              }
+            ],
+            "impact": {
+              "currency": "INR",
+              "midpoint": null
+            }
+          }
+        ],
+        "08a7ecf2-a1f9-43be-837a-3c4ae2024b17": []
+      }
+    },
+    "phase_8_qualification": {
+      "qualified_count": 0,
+      "per_business": {
+        "db9ff252-5f08-43d9-9833-ca3250c6f4bb": {
+          "qualification_id": "cf5adfdd-3638-42af-9c2f-d4e38ef0b565",
+          "status": "RESEARCHED",
+          "rationale": "Entity: COMMERCIAL_VENUE (SALES_ELIGIBLE); Evidence: 2 total (1 FACT); Validated hypotheses: 0; Eligible contact: NO; Solution fit: NONE; Opportunity score: 7.0",
+          "disqualification_reason": null,
+          "evidence_count": 2,
+          "opportunity_score": 7.0
+        },
+        "12e32af7-c1ee-49b0-824b-fc045bcdf490": {
+          "qualification_id": "4d493d80-323f-46d1-9189-23a7cb9137d5",
+          "status": "RESEARCHED",
+          "rationale": "Entity: COMMERCIAL_VENUE (SALES_ELIGIBLE); Evidence: 5 total (3 FACT); Validated hypotheses: 0; Eligible contact: YES (PROVIDER_VERIFIED); Solution fit: NONE; Opportunity score: 27.0",
+          "disqualification_reason": null,
+          "evidence_count": 5,
+          "opportunity_score": 27.0
+        },
+        "9a214fa9-a31a-4cc7-9e2d-d66d5d1b1c0d": {
+          "qualification_id": "7ff54306-9b18-44ac-aace-31802d049f65",
+          "status": "RESEARCHED",
+          "rationale": "Entity: COMMERCIAL_VENUE (SALES_ELIGIBLE); Evidence: 5 total (3 FACT); Validated hypotheses: 0; Eligible contact: YES (PROVIDER_VERIFIED); Solution fit: NONE; Opportunity score: 27.0",
+          "disqualification_reason": null,
+          "evidence_count": 5,
+          "opportunity_score": 27.0
+        },
+        "34edd229-f551-41ae-8c19-f6241083df8a": {
+          "qualification_id": "92cf5945-481b-4356-9fad-587d3584b145",
+          "status": "RESEARCHED",
+          "rationale": "Entity: COMMERCIAL_VENUE (SALES_ELIGIBLE); Evidence: 5 total (3 FACT); Validated hypotheses: 0; Eligible contact: YES (PROVIDER_VERIFIED); Solution fit: NONE; Opportunity score: 27.0",
+          "disqualification_reason": null,
+          "evidence_count": 5,
+          "opportunity_score": 27.0
+        },
+        "380e4a04-e179-4e82-8bf6-a0354e14f0cb": {
+          "qualification_id": "cc5274eb-99b1-4bb3-8314-46f1304d47c7",
+          "status": "RESEARCHED",
+          "rationale": "Entity: SPORTS_CLUB (SALES_ELIGIBLE); Evidence: 5 total (3 FACT); Validated hypotheses: 0; Eligible contact: YES (PROVIDER_VERIFIED); Solution fit: NONE; Opportunity score: 27.0",
+          "disqualification_reason": null,
+          "evidence_count": 5,
+          "opportunity_score": 27.0
+        },
+        "ccba5f73-02d8-4832-98c8-0c237c4ec971": {
+          "qualification_id": "117e55f8-bfd1-4289-a998-7fa335dc57b9",
+          "status": "RESEARCHED",
+          "rationale": "Entity: COMMERCIAL_VENUE (SALES_ELIGIBLE); Evidence: 2 total (1 FACT); Validated hypotheses: 0; Eligible contact: NO; Solution fit: NONE; Opportunity score: 0.0",
+          "disqualification_reason": null,
+          "evidence_count": 2,
+          "opportunity_score": null
+        },
+        "71cf0ffe-e0d3-41e9-82f7-3bd873294e7e": {
+          "qualification_id": "079ef26c-bd61-4b31-8ce3-b854cf2b9593",
+          "status": "RESEARCHED",
+          "rationale": "Entity: COMMERCIAL_VENUE (SALES_ELIGIBLE); Evidence: 5 total (3 FACT); Validated hypotheses: 0; Eligible contact: YES (PROVIDER_VERIFIED); Solution fit: NONE; Opportunity score: 27.0",
+          "disqualification_reason": null,
+          "evidence_count": 5,
+          "opportunity_score": 27.0
+        },
+        "e655745f-5297-4af4-8bf7-45254816efdd": {
+          "qualification_id": "8b03b284-c7b8-41a8-9e2c-bd2ae284ea7f",
+          "status": "RESEARCHED",
+          "rationale": "Entity: COMMERCIAL_VENUE (SALES_ELIGIBLE); Evidence: 5 total (3 FACT); Validated hypotheses: 0; Eligible contact: YES (PROVIDER_VERIFIED); Solution fit: NONE; Opportunity score: 27.0",
+          "disqualification_reason": null,
+          "evidence_count": 5,
+          "opportunity_score": 27.0
+        },
+        "e6927815-3255-4588-9874-64110e95f8d5": {
+          "qualification_id": "5b329adf-1d84-4d56-9d9b-84fab2a028dc",
+          "status": "RESEARCHED",
+          "rationale": "Entity: COMMERCIAL_VENUE (SALES_ELIGIBLE); Evidence: 5 total (3 FACT); Validated hypotheses: 0; Eligible contact: YES (PROVIDER_VERIFIED); Solution fit: NONE; Opportunity score: 27.0",
+          "disqualification_reason": null,
+          "evidence_count": 5,
+          "opportunity_score": 27.0
+        },
+        "08a7ecf2-a1f9-43be-837a-3c4ae2024b17": {
+          "qualification_id": "ee0e344d-ffeb-4f70-978d-645931f79966",
+          "status": "RESEARCHED",
+          "rationale": "Entity: COMMERCIAL_VENUE (SALES_ELIGIBLE); Evidence: 2 total (1 FACT); Validated hypotheses: 0; Eligible contact: YES (PROVIDER_VERIFIED); Solution fit: NONE; Opportunity score: 0.0",
+          "disqualification_reason": null,
+          "evidence_count": 2,
+          "opportunity_score": null
+        }
+      }
+    },
+    "phase_9_dossier": {
+      "dossiers_built": 10,
+      "summary": {
+        "db9ff252-5f08-43d9-9833-ca3250c6f4bb": {
+          "business_name": "Nagoa Futsal Arena",
+          "evidence_count": 2,
+          "opportunity_count": 0,
+          "contacts_count": 0,
+          "qualification_status": "RESEARCHED"
+        },
+        "12e32af7-c1ee-49b0-824b-fc045bcdf490": {
+          "business_name": "Agnel Futsal Arena",
+          "evidence_count": 5,
+          "opportunity_count": 0,
+          "contacts_count": 2,
+          "qualification_status": "RESEARCHED"
+        },
+        "9a214fa9-a31a-4cc7-9e2d-d66d5d1b1c0d": {
+          "business_name": "Penha De Franca Futsal Arena",
+          "evidence_count": 5,
+          "opportunity_count": 0,
+          "contacts_count": 2,
+          "qualification_status": "RESEARCHED"
+        },
+        "34edd229-f551-41ae-8c19-f6241083df8a": {
+          "business_name": "DENGOA Multisports Arena",
+          "evidence_count": 5,
+          "opportunity_count": 0,
+          "contacts_count": 2,
+          "qualification_status": "RESEARCHED"
+        },
+        "380e4a04-e179-4e82-8bf6-a0354e14f0cb": {
+          "business_name": "Galacticos Sports Club",
+          "evidence_count": 5,
+          "opportunity_count": 0,
+          "contacts_count": 2,
+          "qualification_status": "RESEARCHED"
+        },
+        "ccba5f73-02d8-4832-98c8-0c237c4ec971": {
+          "business_name": "Rosa Arena",
+          "evidence_count": 2,
+          "opportunity_count": 0,
+          "contacts_count": 1,
+          "qualification_status": "RESEARCHED"
+        },
+        "71cf0ffe-e0d3-41e9-82f7-3bd873294e7e": {
+          "business_name": "Camp Souza Futsal Turf",
+          "evidence_count": 5,
+          "opportunity_count": 0,
+          "contacts_count": 2,
+          "qualification_status": "RESEARCHED"
+        },
+        "e655745f-5297-4af4-8bf7-45254816efdd": {
+          "business_name": "Don Bosco Oratory Futsal Turf",
+          "evidence_count": 5,
+          "opportunity_count": 0,
+          "contacts_count": 2,
+          "qualification_status": "RESEARCHED"
+        },
+        "e6927815-3255-4588-9874-64110e95f8d5": {
+          "business_name": "Kitex Kick-off Arena",
+          "evidence_count": 5,
+          "opportunity_count": 0,
+          "contacts_count": 2,
+          "qualification_status": "RESEARCHED"
+        },
+        "08a7ecf2-a1f9-43be-837a-3c4ae2024b17": {
+          "business_name": "L D Silva Arena & ATB Ground",
+          "evidence_count": 2,
+          "opportunity_count": 0,
+          "contacts_count": 1,
+          "qualification_status": "RESEARCHED"
+        }
+      }
+    },
+    "phase_10_draft": {
+      "provider": "GROQ",
+      "quality_tier": "TIER_1_ADVANCED",
+      "availability": "AVAILABLE",
+      "drafts": []
+    },
+    "phase_11_safety": {
+      "outbound_messages_count": 0,
+      "transmitted_count": 0,
+      "kill_switch_state": false,
+      "emails_sent": 0,
+      "whatsapp_sent": 0,
+      "sms_sent": 0,
+      "phone_calls": 0,
+      "safety_passed": true
+    },
+    "phase_12_truthfulness_audit": {
+      "total_claims_audited": 30,
+      "claims": [
+        {
+          "business_name": "Nagoa Futsal Arena",
+          "dimension": "WEBSITE_PRESENCE",
+          "claim": "Website status is 'WEBSITE_NOT_OBSERVED'",
+          "source": "OPENSTREETMAP",
+          "evidence_id": "743ee0f7-1aa0-4aa2-a5fb-5d9d076cacfe",
+          "actual_source_content": "Website not observed in discovery provider 'OPENSTREETMAP'. Broader website presence remains unobserved across secondary channels.",
+          "epistemic_tier": "FACT",
+          "model_interpretation": "WEBSITE_NOT_OBSERVED",
+          "final_claim": "Digital surface scoped accurately; not equated to total business absence.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Nagoa Futsal Arena",
+          "dimension": "BOOKING_CAPABILITY",
+          "claim": "Booking capability evaluated as 'BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES'",
+          "source": "OPENSTREETMAP",
+          "evidence_id": "84ef173a-86b8-4498-812e-1b9bc42f397d",
+          "actual_source_content": "Online booking could not be evaluated due to lack of an observed digital surface.",
+          "epistemic_tier": "UNKNOWN",
+          "model_interpretation": "BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES",
+          "final_claim": "Surface-bounded observation; absence of widget does not imply absence of offline/phone booking.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Nagoa Futsal Arena",
+          "dimension": "ENTITY_CLASSIFICATION",
+          "claim": "Entity categorized as 'COMMERCIAL_VENUE' (SALES_ELIGIBLE, conf=0.9)",
+          "source": "OPENSTREETMAP metadata & name tokens",
+          "evidence_id": "ENTITY_RULE_CLASSIFIER",
+          "actual_source_content": "Name: 'Nagoa Futsal Arena', Category: 'SPORTS_ARENA'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "Determined sales eligibility 'SALES_ELIGIBLE' based on commercial vs public signals",
+          "final_claim": "Venue correctly isolated from municipal complexes.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Agnel Futsal Arena",
+          "dimension": "WEBSITE_PRESENCE",
+          "claim": "Website status is 'BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES'",
+          "source": "LOCAL_DIRECTORY",
+          "evidence_id": "b64d2142-aba1-49c5-8a71-2b76f2770135",
+          "actual_source_content": "No booking widget in DOM. Text: 'none'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES",
+          "final_claim": "Digital surface scoped accurately; not equated to total business absence.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Agnel Futsal Arena",
+          "dimension": "BOOKING_CAPABILITY",
+          "claim": "Booking capability evaluated as 'BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES'",
+          "source": "LOCAL_DIRECTORY",
+          "evidence_id": "b64d2142-aba1-49c5-8a71-2b76f2770135",
+          "actual_source_content": "No booking widget in DOM. Text: 'none'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES",
+          "final_claim": "Surface-bounded observation; absence of widget does not imply absence of offline/phone booking.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Agnel Futsal Arena",
+          "dimension": "ENTITY_CLASSIFICATION",
+          "claim": "Entity categorized as 'COMMERCIAL_VENUE' (SALES_ELIGIBLE, conf=0.9)",
+          "source": "LOCAL_DIRECTORY metadata & name tokens",
+          "evidence_id": "ENTITY_RULE_CLASSIFIER",
+          "actual_source_content": "Name: 'Agnel Futsal Arena', Category: 'SPORTS_ARENA'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "Determined sales eligibility 'SALES_ELIGIBLE' based on commercial vs public signals",
+          "final_claim": "Venue correctly isolated from municipal complexes.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Penha De Franca Futsal Arena",
+          "dimension": "WEBSITE_PRESENCE",
+          "claim": "Website status is 'BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES'",
+          "source": "LOCAL_DIRECTORY",
+          "evidence_id": "4442f1d0-7c15-43ef-81ee-f95111551c57",
+          "actual_source_content": "No booking widget in DOM. Text: 'none'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES",
+          "final_claim": "Digital surface scoped accurately; not equated to total business absence.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Penha De Franca Futsal Arena",
+          "dimension": "BOOKING_CAPABILITY",
+          "claim": "Booking capability evaluated as 'BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES'",
+          "source": "LOCAL_DIRECTORY",
+          "evidence_id": "4442f1d0-7c15-43ef-81ee-f95111551c57",
+          "actual_source_content": "No booking widget in DOM. Text: 'none'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES",
+          "final_claim": "Surface-bounded observation; absence of widget does not imply absence of offline/phone booking.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Penha De Franca Futsal Arena",
+          "dimension": "ENTITY_CLASSIFICATION",
+          "claim": "Entity categorized as 'COMMERCIAL_VENUE' (SALES_ELIGIBLE, conf=0.9)",
+          "source": "LOCAL_DIRECTORY metadata & name tokens",
+          "evidence_id": "ENTITY_RULE_CLASSIFIER",
+          "actual_source_content": "Name: 'Penha De Franca Futsal Arena', Category: 'SPORTS_ARENA'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "Determined sales eligibility 'SALES_ELIGIBLE' based on commercial vs public signals",
+          "final_claim": "Venue correctly isolated from municipal complexes.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "DENGOA Multisports Arena",
+          "dimension": "WEBSITE_PRESENCE",
+          "claim": "Website status is 'BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES'",
+          "source": "LOCAL_DIRECTORY",
+          "evidence_id": "01037e41-7761-4e40-ba27-3a941396f28a",
+          "actual_source_content": "No booking widget in DOM. Text: 'none'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES",
+          "final_claim": "Digital surface scoped accurately; not equated to total business absence.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "DENGOA Multisports Arena",
+          "dimension": "BOOKING_CAPABILITY",
+          "claim": "Booking capability evaluated as 'BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES'",
+          "source": "LOCAL_DIRECTORY",
+          "evidence_id": "01037e41-7761-4e40-ba27-3a941396f28a",
+          "actual_source_content": "No booking widget in DOM. Text: 'none'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES",
+          "final_claim": "Surface-bounded observation; absence of widget does not imply absence of offline/phone booking.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "DENGOA Multisports Arena",
+          "dimension": "ENTITY_CLASSIFICATION",
+          "claim": "Entity categorized as 'COMMERCIAL_VENUE' (SALES_ELIGIBLE, conf=0.9)",
+          "source": "LOCAL_DIRECTORY metadata & name tokens",
+          "evidence_id": "ENTITY_RULE_CLASSIFIER",
+          "actual_source_content": "Name: 'DENGOA Multisports Arena', Category: 'SPORTS_ARENA'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "Determined sales eligibility 'SALES_ELIGIBLE' based on commercial vs public signals",
+          "final_claim": "Venue correctly isolated from municipal complexes.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Galacticos Sports Club",
+          "dimension": "WEBSITE_PRESENCE",
+          "claim": "Website status is 'BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES'",
+          "source": "LOCAL_DIRECTORY",
+          "evidence_id": "3e4ac7df-cccd-457d-ae38-75fc1562edb5",
+          "actual_source_content": "No booking widget in DOM. Text: 'none'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES",
+          "final_claim": "Digital surface scoped accurately; not equated to total business absence.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Galacticos Sports Club",
+          "dimension": "BOOKING_CAPABILITY",
+          "claim": "Booking capability evaluated as 'BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES'",
+          "source": "LOCAL_DIRECTORY",
+          "evidence_id": "3e4ac7df-cccd-457d-ae38-75fc1562edb5",
+          "actual_source_content": "No booking widget in DOM. Text: 'none'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES",
+          "final_claim": "Surface-bounded observation; absence of widget does not imply absence of offline/phone booking.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Galacticos Sports Club",
+          "dimension": "ENTITY_CLASSIFICATION",
+          "claim": "Entity categorized as 'SPORTS_CLUB' (SALES_ELIGIBLE, conf=0.85)",
+          "source": "LOCAL_DIRECTORY metadata & name tokens",
+          "evidence_id": "ENTITY_RULE_CLASSIFIER",
+          "actual_source_content": "Name: 'Galacticos Sports Club', Category: 'SPORTS_ARENA'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "Determined sales eligibility 'SALES_ELIGIBLE' based on commercial vs public signals",
+          "final_claim": "Venue correctly isolated from municipal complexes.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Rosa Arena",
+          "dimension": "WEBSITE_PRESENCE",
+          "claim": "Website status is 'WEBSITE_NOT_OBSERVED'",
+          "source": "LOCAL_DIRECTORY",
+          "evidence_id": "N/A",
+          "actual_source_content": "Provider LOCAL_DIRECTORY contains url: https://justdial.com/Goa/Rosa-Arena-Dabolim",
+          "epistemic_tier": "FACT",
+          "model_interpretation": "WEBSITE_NOT_OBSERVED",
+          "final_claim": "Digital surface scoped accurately; not equated to total business absence.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Rosa Arena",
+          "dimension": "BOOKING_CAPABILITY",
+          "claim": "Booking capability evaluated as 'BOOKING_INACCESSIBLE'",
+          "source": "LOCAL_DIRECTORY",
+          "evidence_id": "59683ad5-9382-438b-92bb-14583b8862b3",
+          "actual_source_content": "Website inaccessible or returned HTTP 403",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "BOOKING_INACCESSIBLE",
+          "final_claim": "Surface-bounded observation; absence of widget does not imply absence of offline/phone booking.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Rosa Arena",
+          "dimension": "ENTITY_CLASSIFICATION",
+          "claim": "Entity categorized as 'COMMERCIAL_VENUE' (SALES_ELIGIBLE, conf=0.9)",
+          "source": "LOCAL_DIRECTORY metadata & name tokens",
+          "evidence_id": "ENTITY_RULE_CLASSIFIER",
+          "actual_source_content": "Name: 'Rosa Arena', Category: 'SPORTS_ARENA'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "Determined sales eligibility 'SALES_ELIGIBLE' based on commercial vs public signals",
+          "final_claim": "Venue correctly isolated from municipal complexes.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Camp Souza Futsal Turf",
+          "dimension": "WEBSITE_PRESENCE",
+          "claim": "Website status is 'BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES'",
+          "source": "LOCAL_DIRECTORY",
+          "evidence_id": "d153e527-ceb6-4626-941e-0aeab98424d4",
+          "actual_source_content": "No booking widget in DOM. Text: 'none'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES",
+          "final_claim": "Digital surface scoped accurately; not equated to total business absence.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Camp Souza Futsal Turf",
+          "dimension": "BOOKING_CAPABILITY",
+          "claim": "Booking capability evaluated as 'BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES'",
+          "source": "LOCAL_DIRECTORY",
+          "evidence_id": "d153e527-ceb6-4626-941e-0aeab98424d4",
+          "actual_source_content": "No booking widget in DOM. Text: 'none'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES",
+          "final_claim": "Surface-bounded observation; absence of widget does not imply absence of offline/phone booking.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Camp Souza Futsal Turf",
+          "dimension": "ENTITY_CLASSIFICATION",
+          "claim": "Entity categorized as 'COMMERCIAL_VENUE' (SALES_ELIGIBLE, conf=0.9)",
+          "source": "LOCAL_DIRECTORY metadata & name tokens",
+          "evidence_id": "ENTITY_RULE_CLASSIFIER",
+          "actual_source_content": "Name: 'Camp Souza Futsal Turf', Category: 'SPORTS_ARENA'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "Determined sales eligibility 'SALES_ELIGIBLE' based on commercial vs public signals",
+          "final_claim": "Venue correctly isolated from municipal complexes.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Don Bosco Oratory Futsal Turf",
+          "dimension": "WEBSITE_PRESENCE",
+          "claim": "Website status is 'BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES'",
+          "source": "LOCAL_DIRECTORY",
+          "evidence_id": "359d3bcd-3d7a-4630-89d1-56440808efd7",
+          "actual_source_content": "No booking widget in DOM. Text: 'none'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES",
+          "final_claim": "Digital surface scoped accurately; not equated to total business absence.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Don Bosco Oratory Futsal Turf",
+          "dimension": "BOOKING_CAPABILITY",
+          "claim": "Booking capability evaluated as 'BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES'",
+          "source": "LOCAL_DIRECTORY",
+          "evidence_id": "359d3bcd-3d7a-4630-89d1-56440808efd7",
+          "actual_source_content": "No booking widget in DOM. Text: 'none'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES",
+          "final_claim": "Surface-bounded observation; absence of widget does not imply absence of offline/phone booking.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Don Bosco Oratory Futsal Turf",
+          "dimension": "ENTITY_CLASSIFICATION",
+          "claim": "Entity categorized as 'COMMERCIAL_VENUE' (SALES_ELIGIBLE, conf=0.85)",
+          "source": "LOCAL_DIRECTORY metadata & name tokens",
+          "evidence_id": "ENTITY_RULE_CLASSIFIER",
+          "actual_source_content": "Name: 'Don Bosco Oratory Futsal Turf', Category: 'SPORTS_ARENA'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "Determined sales eligibility 'SALES_ELIGIBLE' based on commercial vs public signals",
+          "final_claim": "Venue correctly isolated from municipal complexes.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Kitex Kick-off Arena",
+          "dimension": "WEBSITE_PRESENCE",
+          "claim": "Website status is 'BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES'",
+          "source": "LOCAL_DIRECTORY",
+          "evidence_id": "aab23a2e-b5d0-4c31-ac4a-e64196921418",
+          "actual_source_content": "No booking widget in DOM. Text: 'none'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES",
+          "final_claim": "Digital surface scoped accurately; not equated to total business absence.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Kitex Kick-off Arena",
+          "dimension": "BOOKING_CAPABILITY",
+          "claim": "Booking capability evaluated as 'BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES'",
+          "source": "LOCAL_DIRECTORY",
+          "evidence_id": "aab23a2e-b5d0-4c31-ac4a-e64196921418",
+          "actual_source_content": "No booking widget in DOM. Text: 'none'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "BOOKING_NOT_OBSERVED_ON_RESEARCHED_SURFACES",
+          "final_claim": "Surface-bounded observation; absence of widget does not imply absence of offline/phone booking.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "Kitex Kick-off Arena",
+          "dimension": "ENTITY_CLASSIFICATION",
+          "claim": "Entity categorized as 'COMMERCIAL_VENUE' (SALES_ELIGIBLE, conf=0.9)",
+          "source": "LOCAL_DIRECTORY metadata & name tokens",
+          "evidence_id": "ENTITY_RULE_CLASSIFIER",
+          "actual_source_content": "Name: 'Kitex Kick-off Arena', Category: 'SPORTS_ARENA'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "Determined sales eligibility 'SALES_ELIGIBLE' based on commercial vs public signals",
+          "final_claim": "Venue correctly isolated from municipal complexes.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "L D Silva Arena & ATB Ground",
+          "dimension": "WEBSITE_PRESENCE",
+          "claim": "Website status is 'WEBSITE_NOT_OBSERVED'",
+          "source": "LOCAL_DIRECTORY",
+          "evidence_id": "N/A",
+          "actual_source_content": "Provider LOCAL_DIRECTORY contains url: https://justdial.com/Goa/L-D-Silva-Arena-Benaulim",
+          "epistemic_tier": "FACT",
+          "model_interpretation": "WEBSITE_NOT_OBSERVED",
+          "final_claim": "Digital surface scoped accurately; not equated to total business absence.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "L D Silva Arena & ATB Ground",
+          "dimension": "BOOKING_CAPABILITY",
+          "claim": "Booking capability evaluated as 'BOOKING_INACCESSIBLE'",
+          "source": "LOCAL_DIRECTORY",
+          "evidence_id": "67ec447b-2376-439e-87f2-a01fcc797cba",
+          "actual_source_content": "Website inaccessible or returned HTTP 403",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "BOOKING_INACCESSIBLE",
+          "final_claim": "Surface-bounded observation; absence of widget does not imply absence of offline/phone booking.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        },
+        {
+          "business_name": "L D Silva Arena & ATB Ground",
+          "dimension": "ENTITY_CLASSIFICATION",
+          "claim": "Entity categorized as 'COMMERCIAL_VENUE' (SALES_ELIGIBLE, conf=0.9)",
+          "source": "LOCAL_DIRECTORY metadata & name tokens",
+          "evidence_id": "ENTITY_RULE_CLASSIFIER",
+          "actual_source_content": "Name: 'L D Silva Arena & ATB Ground', Category: 'SPORTS_ARENA'",
+          "epistemic_tier": "INFERENCE",
+          "model_interpretation": "Determined sales eligibility 'SALES_ELIGIBLE' based on commercial vs public signals",
+          "final_claim": "Venue correctly isolated from municipal complexes.",
+          "audit_verdict": "VERIFIED_ACCURATE"
+        }
+      ],
+      "hallucinated_absence_count": 0,
+      "overclaiming_count": 0,
+      "unsupported_inference_count": 0,
+      "unsupported_financial_model_count": 0
+    }
+  }
+}

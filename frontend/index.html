@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opportunity Intelligence & Consultative Sales Platform</title>
+  <meta name="description" content="Autonomous enterprise B2B opportunity discovery, solution mapping, and consultative outreach engine.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <script>
+    // Configurable API base for Opportunity Intelligence Mission Control.
+    // If null, frontend automatically resolves to http://127.0.0.1:8000/api/v1 when served on dev ports (e.g. 5500).
+    // Can also be overridden at runtime via localStorage.getItem('api_base_url').
+    window.__API_BASE__ = window.__API_BASE__ || null;
+  </script>
+</head>
+<body class="dark-theme">
+  <div class="app-container">
+    <!-- Top Navigation & System Status Bar -->
+    <header class="top-nav glass-panel">
+      <div class="brand">
+        <div class="brand-logo">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="brand-info">
+          <h1>OPPORTUNITY INTELLIGENCE</h1>
+          <span class="subtext">Autonomous B2B Consultative Sales Engine</span>
+        </div>
+      </div>
+
+      <div class="system-controls">
+        <div class="status-indicator live" id="system-health-badge">
+          <span class="status-pulse"></span>
+          <span id="health-text">ENGINE ONLINE</span>
+        </div>
+        
+        <div class="kill-switch-container">
+          <span class="ks-label">EMERGENCY KILL SWITCH</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="kill-switch-toggle">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="user-auth-bar" id="user-auth-bar">
+          <span id="user-display-email" class="user-email-text">Not Signed In</span>
+          <button id="auth-btn" class="btn btn-secondary btn-sm">Sign In</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-layout">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar glass-panel">
+        <nav class="nav-menu">
+          <button class="nav-item active" data-tab="overview">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            <span>Mission Control</span>
+          </button>
+          <button class="nav-item" data-tab="leads">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span>Lead Dossiers & Scoring</span>
+          </button>
+          <button class="nav-item" data-tab="claims">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Claims Governance</span>
+          </button>
+          <button class="nav-item" data-tab="dispatcher">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <span>16-Gate Dispatcher</span>
+          </button>
+          <button class="nav-item" data-tab="inbox">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
+            <span>Inbound Triage & Safety</span>
+          </button>
+          <button class="nav-item" data-tab="recommendations">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span>Learning & Analytics</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="tenant-badge">
+            <span class="label">TENANT WORKSPACE</span>
+            <strong id="active-workspace-label">ws_default</strong>
+          </div>
+          <div class="score-semantics-disclaimer">
+            <code>SCORE: PRIORITIZATION_HEURISTIC</code>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Content Views -->
+      <main class="content-area">
+        
+        <!-- View 1: Mission Control -->
+        <section id="tab-overview" class="view-panel active">
+          <div class="view-header">
+            <h2>System Overview & Health Status</h2>
+            <p>Real-time operational metrics, multi-tier limits, and conversion indicators.</p>
+          </div>
+
+          <div class="metrics-grid">
+            <div class="metric-card glass-panel">
+              <span class="card-title">Discovered Businesses</span>
+              <div class="card-val" id="stat-discovered">--</div>
+              <span class="card-note">Normalized profiles</span>
+            </div>
+            <div class="metric-card glass-panel">
+              <span class="card-title">Validated Hypotheses</span>
+              <div class="card-val highlight-blue" id="stat-hypotheses">--</div>
+              <span class="card-note">≥ 0.70 Confidence score</span>
+            </div>
+            <div class="metric-card glass-panel">
+              <span class="card-title">Outbound Transmitted</span>
+              <div class="card-val highlight-green" id="stat-transmitted">--</div>
+              <span class="card-note">Passed all 16 runtime gates</span>
+            </div>
+            <div class="metric-card glass-panel">
+              <span class="card-title">Gate 14 Suppressed</span>
+              <div class="card-val highlight-red" id="stat-suppressed">--</div>
+              <span class="card-note">Blocked at final transaction</span>
+            </div>
+            <div class="metric-card glass-panel">
+              <span class="card-title">Hot Deal Conversions</span>
+              <div class="card-val highlight-gold" id="stat-hot-deals">--</div>
+              <span class="card-note">Escalated to Operator</span>
+            </div>
+            <div class="metric-card glass-panel">
+              <span class="card-title">Reply Rate</span>
+              <div class="card-val highlight-purple" id="stat-reply-rate">--%</div>
+              <span class="card-note">Inbound consultative replies</span>
+            </div>
+          </div>
+
+          <!-- 16-Gate Pipeline Visualizer Card -->
+          <div class="pipeline-card glass-panel">
+            <div class="pipeline-header">
+              <h3>Authoritative 16-Gate Outbound Pipeline</h3>
+              <span class="tag tag-immutable">STRICT MONOTONIC SEQUENCE</span>
+            </div>
+            <div class="gates-track">
+              <div class="gate-step" id="g-step-1"><span class="g-num">1</span><span class="g-name">Campaign Version</span></div>
+              <div class="gate-step" id="g-step-2"><span class="g-num">2</span><span class="g-name">Claims Exist</span></div>
+              <div class="gate-step" id="g-step-3"><span class="g-num">3</span><span class="g-name">Claims Approved</span></div>
+              <div class="gate-step" id="g-step-4"><span class="g-num">4</span><span class="g-name">Hash Untampered</span></div>
+              <div class="gate-step" id="g-step-5"><span class="g-num">5</span><span class="g-name">Score ≥ 50</span></div>
+              <div class="gate-step" id="g-step-6"><span class="g-num">6</span><span class="g-name">Contact Verified</span></div>
+              <div class="gate-step" id="g-step-7"><span class="g-num">7</span><span class="g-name">Sender Ready</span></div>
+              <div class="gate-step" id="g-step-8"><span class="g-num">8</span><span class="g-name">Tier 1 (Org)</span></div>
+              <div class="gate-step" id="g-step-9"><span class="g-num">9</span><span class="g-name">Tier 2 (WS)</span></div>
+              <div class="gate-step" id="g-step-10"><span class="g-num">10</span><span class="g-name">Tier 3 (Camp)</span></div>
+              <div class="gate-step" id="g-step-11"><span class="g-num">11</span><span class="g-name">Tier 4 (Sender)</span></div>
+              <div class="gate-step" id="g-step-12"><span class="g-num">12</span><span class="g-name">Jurisdiction</span></div>
+              <div class="gate-step" id="g-step-13"><span class="g-num">13</span><span class="g-name">Burn-Rate</span></div>
+              <div class="gate-step critical-gate" id="g-step-14"><span class="g-num">14</span><span class="g-name">Suppression</span></div>
+              <div class="gate-step critical-gate" id="g-step-15"><span class="g-num">15</span><span class="g-name">Kill Switch</span></div>
+              <div class="gate-step" id="g-step-16"><span class="g-num">16</span><span class="g-name">No Takeover</span></div>
+          <!-- Capacity Policy & Quota Controls Card -->
+          <div class="pipeline-card glass-panel" style="margin-top: 1.5rem;">
+            <div class="pipeline-header">
+              <h3>Capacity Policy & Resource Quotas</h3>
+              <div style="display: flex; gap: 0.5rem; align-items: center;">
+                <span class="tag tag-immutable" id="capacity-quality-floor-badge">QUALITY FLOOR: TIER_1_ADVANCED</span>
+                <button id="btn-drain-backpressure" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;" title="Drain and resume eligible queued work">Drain Backpressure</button>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem;">
+              <div class="glass-panel" style="padding: 1rem; background: rgba(255,255,255,0.02); border-radius: 8px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                  <strong>Today's Outreach Capacity</strong>
+                  <span id="cap-outreach-text">-- / --</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); border-radius: 4px; height: 8px; overflow: hidden;">
+                  <div id="cap-outreach-bar" style="background: #10b981; height: 100%; width: 0%; transition: width 0.3s;"></div>
+                </div>
+                <small style="color: #94a3b8; margin-top: 0.5rem; display: block;">Remaining: <span id="cap-outreach-rem">--</span></small>
+              </div>
+
+              <div class="glass-panel" style="padding: 1rem; background: rgba(255,255,255,0.02); border-radius: 8px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                  <strong>Today's LLM Operations</strong>
+                  <span id="cap-llm-text">-- / --</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); border-radius: 4px; height: 8px; overflow: hidden;">
+                  <div id="cap-llm-bar" style="background: #6366f1; height: 100%; width: 0%; transition: width 0.3s;"></div>
+                </div>
+                <small style="color: #94a3b8; margin-top: 0.5rem; display: block;">Remaining: <span id="cap-llm-rem">--</span></small>
+              </div>
+
+              <div class="glass-panel" style="padding: 1rem; background: rgba(255,255,255,0.02); border-radius: 8px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                  <strong>Active Provider Status</strong>
+                  <span id="cap-provider-name" style="color: #38bdf8;">--</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: #cbd5e1; margin-top: 0.5rem;">
+                  <span>Quality Tier:</span>
+                  <strong id="cap-provider-tier">--</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: #cbd5e1; margin-top: 0.25rem;">
+                  <span>Availability:</span>
+                  <span id="cap-provider-avail" style="color: #4ade80;">--</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- View 2: Lead Dossiers & Operator Workflow -->
+        <section id="tab-leads" class="view-panel">
+          <div class="view-header">
+            <h2>Operator Workflow & Opportunity Dossiers</h2>
+            <p>End-to-end pipeline: Discovery → Evidence → Qualification → Lead Dossier → AI Draft → Human Review → Campaign Enrollment</p>
+          </div>
+
+          <!-- Targeted Business Discovery Search Bar -->
+          <div class="glass-panel" style="padding: 1.25rem; margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <h3 style="margin: 0; font-size: 1.1rem; color: #f8fafc;">Phase 1: Targeted Business Discovery</h3>
+              <span class="tag" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8;">SEARCH & INGEST</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 2fr 1.5fr 1.5fr auto; gap: 0.75rem; align-items: end;">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="disc-query" style="font-size: 0.8rem; color: #94a3b8;">Query / Business Category</label>
+                <input type="text" id="disc-query" placeholder="e.g. futsal arenas, dental clinics, gyms" style="padding: 0.5rem; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: #fff; width: 100%;">
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="disc-location" style="font-size: 0.8rem; color: #94a3b8;">Geography / City</label>
+                <input type="text" id="disc-location" placeholder="e.g. Goa, Austin, TX, London" style="padding: 0.5rem; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: #fff; width: 100%;">
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="disc-category" style="font-size: 0.8rem; color: #94a3b8;">Industry Category</label>
+                <input type="text" id="disc-category" placeholder="e.g. Sports / Recreation, Healthcare" style="padding: 0.5rem; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: #fff; width: 100%;">
+              </div>
+              <button id="btn-run-discovery" class="btn btn-primary" style="height: 38px; white-space: nowrap;">Search & Register</button>
+            </div>
+            <div id="disc-status-msg" style="font-size: 0.85rem; margin-top: 0.5rem; color: #38bdf8;"></div>
+          </div>
+
+          <div class="lead-dossier-container" id="lead-dossier-list">
+            <!-- Rendered dynamically -->
+          </div>
+
+          <!-- Comprehensive Operator Workflow Modal / Workspace -->
+          <div id="biz-detail-modal" class="modal-overlay" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 999; overflow-y: auto; padding: 2rem 1rem;">
+            <div class="glass-panel" style="max-width: 1080px; margin: auto; padding: 2rem; border-radius: 12px; background: #0b1120; border: 1px solid rgba(255,255,255,0.18); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.9);">
+              
+              <!-- Modal Top Header -->
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
+                <div>
+                  <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem;">
+                    <span id="modal-biz-category" class="dossier-category">CATEGORY</span>
+                    <span id="modal-biz-origin-badge" class="tag">ORIGIN</span>
+                    <span id="modal-top-workflow-status" class="tag" style="background: rgba(99,102,241,0.2); color: #818cf8; font-weight: 700;">DISCOVERED</span>
+                  </div>
+                  <h2 id="modal-biz-name" style="margin: 0; color: #fff; font-size: 1.6rem;">Business Name</h2>
+                  <div id="modal-biz-meta" style="color: #94a3b8; font-size: 0.85rem; margin-top: 0.25rem;">--</div>
+                </div>
+                <button id="btn-close-biz-modal" class="btn btn-secondary btn-sm" style="font-size: 0.9rem; padding: 0.4rem 0.8rem;">Close ✕</button>
+              </div>
+
+              <!-- Operator Workflow Navigation Tabs -->
+              <div class="workflow-stepper-bar" style="display: flex; gap: 0.4rem; overflow-x: auto; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.08);">
+                <button class="btn btn-sm wf-step-btn active" data-step="identity" style="font-size: 0.78rem;">1. Identity & Contacts</button>
+                <button class="btn btn-sm wf-step-btn" data-step="research" style="font-size: 0.78rem;">2. Research & Evidence</button>
+                <button class="btn btn-sm wf-step-btn" data-step="opportunities" style="font-size: 0.78rem;">3. Opportunities & Score</button>
+                <button class="btn btn-sm wf-step-btn" data-step="qualification" style="font-size: 0.78rem;">4. Lead Qualification</button>
+                <button class="btn btn-sm wf-step-btn" data-step="dossier" style="font-size: 0.78rem;">5. Lead Dossier</button>
+                <button class="btn btn-sm wf-step-btn" data-step="draft" style="font-size: 0.78rem;">6. AI Draft & Human Review</button>
+                <button class="btn btn-sm wf-step-btn" data-step="campaign" style="font-size: 0.78rem;">7. Campaign Enrollment</button>
+              </div>
+
+              <!-- STEP 1: Business Identity & Contacts -->
+              <div id="wf-panel-identity" class="wf-step-panel">
+                <h3 style="color: #38bdf8; margin-bottom: 0.75rem;">Business Identity & Verified Contacts</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;">
+                  <div class="glass-panel" style="padding: 1rem; background: rgba(255,255,255,0.02);">
+                    <h4 style="color: #cbd5e1; margin-bottom: 0.5rem;">Authoritative Identity</h4>
+                    <table style="width: 100%; font-size: 0.85rem; line-height: 1.8; color: #94a3b8;">
+                      <tr><td style="width: 35%;">Location/City:</td><td id="m-id-location" style="color: #f8fafc;">--</td></tr>
+                      <tr><td>Website/Domain:</td><td id="m-id-website" style="color: #f8fafc;">--</td></tr>
+                      <tr><td>Phone:</td><td id="m-id-phone" style="color: #f8fafc;">--</td></tr>
+                      <tr><td>Primary Email:</td><td id="m-id-email" style="color: #f8fafc;">--</td></tr>
+                      <tr><td>Discovery Provider:</td><td id="m-id-provider" style="color: #f8fafc;">--</td></tr>
+                      <tr><td>Identity Confidence:</td><td id="m-id-confidence" style="color: #f8fafc;">--</td></tr>
+                    </table>
+                  </div>
+                  <div class="glass-panel" style="padding: 1rem; background: rgba(255,255,255,0.02);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                      <h4 style="color: #cbd5e1; margin: 0;">Server-Authoritative Contacts</h4>
+                      <span class="tag" style="background: rgba(16,185,129,0.15); color: #10b981; font-size: 0.7rem;">GATE 6 SERVER ENFORCED</span>
+                    </div>
+                    <div id="m-contacts-container" style="max-height: 160px; overflow-y: auto;">
+                      <!-- Populated dynamically -->
+                    </div>
+                  </div>
+                </div>
+                <div style="text-align: right;">
+                  <button class="btn btn-primary btn-sm btn-wf-next" data-next="research">Next: Research & Evidence →</button>
+                </div>
+              </div>
+
+              <!-- STEP 2: Research & Empirical Evidence -->
+              <div id="wf-panel-research" class="wf-step-panel" style="display: none;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                  <div>
+                    <h3 style="color: #38bdf8; margin: 0;">Empirical Research & Evidence Collection</h3>
+                    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0.25rem 0 0 0;">Inspect collected facts, presence/absence signals, and epistemic classifications.</p>
+                  </div>
+                  <div style="display: flex; gap: 0.75rem; align-items: center;">
+                    <button id="modal-btn-run-research" class="btn btn-primary btn-sm">Run Research Pipeline</button>
+                    <span id="modal-research-status" style="font-size: 0.85rem; color: #38bdf8;"></span>
+                  </div>
+                </div>
+                <div id="modal-evidence-list" style="max-height: 280px; overflow-y: auto; margin-bottom: 1.25rem;">
+                  <!-- Dynamically rendered -->
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <button class="btn btn-secondary btn-sm btn-wf-prev" data-prev="identity">← Back to Identity</button>
+                  <button class="btn btn-primary btn-sm btn-wf-next" data-next="opportunities">Next: Opportunities & Score →</button>
+                </div>
+              </div>
+
+              <!-- STEP 3: Opportunities & Heuristic Score -->
+              <div id="wf-panel-opportunities" class="wf-step-panel" style="display: none;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                  <div>
+                    <h3 style="color: #38bdf8; margin: 0;">Opportunity Intelligence & Score</h3>
+                    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0.25rem 0 0 0;">Detected digital gaps, problem hypotheses, and priority score.</p>
+                  </div>
+                  <button id="modal-btn-analyze-opps" class="btn btn-secondary btn-sm">Analyze Opportunities</button>
+                </div>
+
+                <!-- Opportunity Score Heuristic Disclaimer Box -->
+                <div class="glass-panel" style="padding: 0.75rem 1rem; margin-bottom: 1rem; background: rgba(56,189,248,0.05); border: 1px solid rgba(56,189,248,0.2);">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                      <strong style="color: #38bdf8; font-size: 0.9rem;">OPPORTUNITY SCORE: PRIORITIZED FOR OPERATOR REVIEW</strong>
+                      <div style="font-size: 0.78rem; color: #cbd5e1; margin-top: 2px;">This heuristic ranks businesses for review. It does NOT constitute qualification, contact verification, or outbound sending authorization.</div>
+                    </div>
+                    <div id="m-opp-score-box" style="text-align: right; min-width: 90px;">
+                      <div id="m-opp-score-val" style="font-size: 1.6rem; font-weight: 800; color: #38bdf8; font-family: monospace;">--</div>
+                      <span id="m-opp-score-badge" class="tag" style="background: rgba(255,255,255,0.1); font-size: 0.7rem;">UNSCORED</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="modal-opportunity-list" style="max-height: 280px; overflow-y: auto; margin-bottom: 1.25rem;">
+                  <!-- Dynamically rendered -->
+                </div>
+
+                <div style="display: flex; justify-content: space-between;">
+                  <button class="btn btn-secondary btn-sm btn-wf-prev" data-prev="research">← Back to Research</button>
+                  <button class="btn btn-primary btn-sm btn-wf-next" data-next="qualification">Next: Lead Qualification →</button>
+                </div>
+              </div>
+
+              <!-- STEP 4: Server-Side Lead Qualification -->
+              <div id="wf-panel-qualification" class="wf-step-panel" style="display: none;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                  <div>
+                    <h3 style="color: #38bdf8; margin: 0;">Server-Side Lead Qualification</h3>
+                    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0.25rem 0 0 0;">Strict server-side validation of research depth, verified contact presence, and solution fit.</p>
+                  </div>
+                  <button id="modal-btn-qualify-lead" class="btn btn-primary btn-sm">Qualify Lead</button>
+                </div>
+
+                <div id="m-qual-result-box" class="glass-panel" style="padding: 1.25rem; margin-bottom: 1.25rem; background: rgba(255,255,255,0.02);">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                    <div>
+                      <span style="font-size: 0.8rem; color: #94a3b8; text-transform: uppercase;">Status:</span>
+                      <span id="m-qual-status-badge" class="tag" style="margin-left: 0.5rem; font-weight: 700;">NOT QUALIFIED</span>
+                    </div>
+                    <span id="m-qual-date" style="font-size: 0.8rem; color: #64748b;">--</span>
+                  </div>
+                  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-bottom: 1rem;">
+                    <div style="padding: 0.6rem; background: rgba(0,0,0,0.3); border-radius: 6px; text-align: center;">
+                      <div style="font-size: 0.75rem; color: #94a3b8;">Total Evidence</div>
+                      <div id="m-qual-ev-count" style="font-size: 1.2rem; font-weight: 700; color: #fff;">0</div>
+                    </div>
+                    <div style="padding: 0.6rem; background: rgba(0,0,0,0.3); border-radius: 6px; text-align: center;">
+                      <div style="font-size: 0.75rem; color: #94a3b8;">Fact Signals</div>
+                      <div id="m-qual-fact-count" style="font-size: 1.2rem; font-weight: 700; color: #10b981;">0</div>
+                    </div>
+                    <div style="padding: 0.6rem; background: rgba(0,0,0,0.3); border-radius: 6px; text-align: center;">
+                      <div style="font-size: 0.75rem; color: #94a3b8;">Hypotheses</div>
+                      <div id="m-qual-hyp-count" style="font-size: 1.2rem; font-weight: 700; color: #a855f7;">0</div>
+                    </div>
+                    <div style="padding: 0.6rem; background: rgba(0,0,0,0.3); border-radius: 6px; text-align: center;">
+                      <div style="font-size: 0.75rem; color: #94a3b8;">Eligible Contact</div>
+                      <div id="m-qual-contact-ready" style="font-size: 1.2rem; font-weight: 700; color: #f59e0b;">NO</div>
+                    </div>
+                  </div>
+                  <div style="font-size: 0.85rem; color: #cbd5e1; margin-bottom: 0.5rem;">
+                    <strong>Qualification Rationale:</strong>
+                    <div id="m-qual-rationale" style="color: #94a3b8; margin-top: 0.25rem;">Click "Qualify Lead" to run the server-side qualification engine.</div>
+                  </div>
+                </div>
+
+                <div style="display: flex; justify-content: space-between;">
+                  <button class="btn btn-secondary btn-sm btn-wf-prev" data-prev="opportunities">← Back to Opportunities</button>
+                  <button class="btn btn-primary btn-sm btn-wf-next" data-next="dossier">Next: Lead Dossier →</button>
+                </div>
+              </div>
+
+              <!-- STEP 5: Aggregated Lead Dossier View -->
+              <div id="wf-panel-dossier" class="wf-step-panel" style="display: none;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                  <div>
+                    <h3 style="color: #38bdf8; margin: 0;">Comprehensive Lead Dossier</h3>
+                    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0.25rem 0 0 0;">Unified operator brief combining business, contact, opportunity, evidence, and financial impact.</p>
+                  </div>
+                  <button id="modal-btn-refresh-dossier" class="btn btn-secondary btn-sm">Refresh Dossier</button>
+                </div>
+
+                <div id="m-dossier-content" style="max-height: 340px; overflow-y: auto; margin-bottom: 1.25rem;">
+                  <p style="color: #94a3b8;">Loading lead dossier...</p>
+                </div>
+
+                <div style="display: flex; justify-content: space-between;">
+                  <button class="btn btn-secondary btn-sm btn-wf-prev" data-prev="qualification">← Back to Qualification</button>
+                  <button class="btn btn-primary btn-sm btn-wf-next" data-next="draft">Next: AI Email Draft & Review →</button>
+                </div>
+              </div>
+
+              <!-- STEP 6: AI Email Draft & Human Review -->
+              <div id="wf-panel-draft" class="wf-step-panel" style="display: none;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                  <div>
+                    <h3 style="color: #38bdf8; margin: 0;">AI Consultative Email Draft & Human Review</h3>
+                    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0.25rem 0 0 0;">Evidence-backed personalization claims. AI cannot self-approve or transmit.</p>
+                  </div>
+                  <div style="display: flex; gap: 0.5rem;">
+                    <button id="modal-btn-generate-draft" class="btn btn-primary btn-sm">Generate AI Draft</button>
+                    <button id="modal-btn-regenerate-draft" class="btn btn-secondary btn-sm" style="display: none;">Regenerate</button>
+                  </div>
+                </div>
+
+                <div id="m-draft-capacity-warning" style="display: none; padding: 0.6rem 0.8rem; border-radius: 6px; font-size: 0.85rem; margin-bottom: 1rem;"></div>
+
+                <div id="m-draft-box" style="margin-bottom: 1.25rem;">
+                  <div style="padding: 1.5rem; text-align: center; color: #94a3b8; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px dashed rgba(255,255,255,0.1);">
+                    No email draft generated yet. Click "Generate AI Draft" to synthesize an evidence-backed email.
+                  </div>
+                </div>
+
+                <div style="display: flex; justify-content: space-between;">
+                  <button class="btn btn-secondary btn-sm btn-wf-prev" data-prev="dossier">← Back to Dossier</button>
+                  <button class="btn btn-primary btn-sm btn-wf-next" data-next="campaign">Next: Campaign Enrollment →</button>
+                </div>
+              </div>
+
+              <!-- STEP 7: Campaign Enrollment & Outbound Boundary -->
+              <div id="wf-panel-campaign" class="wf-step-panel" style="display: none;">
+                <h3 style="color: #38bdf8; margin-bottom: 0.5rem;">Campaign Enrollment & Outbound Gate Hand-off</h3>
+                
+                <!-- Mandatory Outbound Safety Boundary Alert -->
+                <div class="glass-panel" style="padding: 1rem; margin-bottom: 1.25rem; background: rgba(245,158,11,0.06); border: 1px solid rgba(245,158,11,0.25);">
+                  <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                    <span style="font-size: 1.5rem;">🛡️</span>
+                    <div style="font-size: 0.85rem; line-height: 1.5; color: #fde68a;">
+                      <strong>STRICT OUTBOUND TRANSMISSION BOUNDARY:</strong>
+                      <p style="margin: 0.25rem 0 0 0; color: #cbd5e1;">
+                        Campaign enrollment enrolls the lead and approved draft into a campaign record in state <code>CAMPAIGN_ENROLLED (AWAITING OUTBOUND AUTHORIZATION)</code>.
+                        It <strong>DOES NOT</strong> trigger message transmission. All messages must pass all 16 runtime gates in the <strong>OutboundDispatchEngine</strong> (including Gate 6 Verification, Gate 14 Suppression, Gate 15 Kill Switch, Gate 16 Human Takeover) before any transmission can occur.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="glass-panel" style="padding: 1.25rem; margin-bottom: 1.25rem; background: rgba(255,255,255,0.02);">
+                  <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="m-select-campaign" style="font-size: 0.85rem; color: #94a3b8;">Select Target Campaign</label>
+                    <select id="m-select-campaign" style="width: 100%; padding: 0.6rem; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; color: #fff;">
+                      <option value="">Loading campaigns...</option>
+                    </select>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div id="m-campaign-enroll-status" style="font-size: 0.85rem; color: #94a3b8;">
+                      Select an approved draft and target campaign.
+                    </div>
+                    <button id="modal-btn-enroll-campaign" class="btn btn-primary btn-sm" disabled>Enroll in Campaign</button>
+                  </div>
+                </div>
+
+                <div id="m-enrolled-handoff-box" style="display: none; padding: 1rem; background: rgba(16,185,129,0.08); border: 1px solid #10b981; border-radius: 8px; margin-bottom: 1.25rem;">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                      <strong style="color: #10b981;">✓ CAMPAIGN ENROLLED (AWAITING AUTHORIZATION)</strong>
+                      <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 2px;">The lead is staged. Proceed to 16-Gate Dispatcher for final runtime gate evaluation.</div>
+                    </div>
+                    <button id="modal-btn-goto-dispatcher" class="btn btn-secondary btn-sm" style="border-color: #10b981; color: #10b981;">Open 16-Gate Dispatcher →</button>
+                  </div>
+                </div>
+
+                <div style="display: flex; justify-content: space-between;">
+                  <button class="btn btn-secondary btn-sm btn-wf-prev" data-prev="draft">← Back to AI Draft</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- View 3: Claims Governance -->
+        <section id="tab-claims" class="view-panel">
+          <div class="view-header">
+            <h2>Cryptographic Claims Governance</h2>
+            <p>ApprovedSalesClaim records with SHA-256 canonical hashing and operator sign-off enforcement.</p>
+          </div>
+          <div class="claims-table-container glass-panel">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Claim ID</th>
+                  <th>Claim Text</th>
+                  <th>Version</th>
+                  <th>Status</th>
+                  <th>Canonical SHA-256 Hash</th>
+                  <th>Integrity</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="claims-tbody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- View 4: 16-Gate Dispatcher Simulator -->
+        <section id="tab-dispatcher" class="view-panel">
+          <div class="view-header">
+            <h2>Live 16-Gate Outbound Dispatch Console</h2>
+            <p>Execute and inspect atomic dispatch transactions across all 16 runtime gates.</p>
+          </div>
+          <div class="dispatcher-grid">
+            <div class="dispatch-form-card glass-panel">
+              <h3>Configure Test Dispatch</h3>
+              <form id="dispatch-form">
+                <div class="form-group">
+                  <label for="disp-email">Recipient Email</label>
+                  <input type="email" id="disp-email" value="doctor@apexhealth.test" required>
+                </div>
+                <div class="form-group">
+                  <label for="disp-country">Country Jurisdiction</label>
+                  <select id="disp-country">
+                    <option value="US">United States (CAN-SPAM / Allowed)</option>
+                    <option value="CA">Canada (CASL / Human Review Required)</option>
+                    <option value="GB">United Kingdom (UK GDPR / Allowed)</option>
+                    <option value="DE">Germany (UWG / Human Review Required)</option>
+                    <option value="XX">Unknown / Unregistered Country (Blocked)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Contact Verification Status</label>
+                  <div class="contact-verification-badge-card" style="padding: 10px 12px; background: rgba(15,23,42,0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                      <span style="font-size:0.8rem; color:#94a3b8; font-weight:600;">GATE 6 DETERMINATION:</span>
+                      <span id="disp-verification-status-badge" class="tag" style="background:rgba(56,189,248,0.15); color:#38bdf8; font-weight:600;">SERVER AUTHORITATIVE</span>
+                    </div>
+                    <div style="font-size:0.75rem; color:#cbd5e1; margin-top:4px;">
+                      Verification is determined strictly from database <code>ContactRecord</code>. Client input cannot override or bypass Gate 6.
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="disp-thread-state">Thread State</label>
+                  <select id="disp-thread-state">
+                    <option value="AUTONOMOUS">AUTONOMOUS</option>
+                    <option value="HUMAN_REVIEW_REQUIRED">HUMAN_REVIEW_REQUIRED (Blocked)</option>
+                    <option value="HUMAN_TAKEOVER">HUMAN_TAKEOVER (Blocked)</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary" id="btn-execute-dispatch">
+                  Execute 16-Gate Dispatch
+                </button>
+              </form>
+            </div>
+
+            <div class="dispatch-results-card glass-panel">
+              <h3>Live Gate Execution Trace</h3>
+              <div class="trace-box" id="dispatch-trace-output">
+                <div class="trace-placeholder">Execute dispatch to view live trace of all 16 gates...</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- View 5: Inbound Triage & Safety Gate -->
+        <section id="tab-inbox" class="view-panel">
+          <div class="view-header">
+            <h2>Inbound Reply Triage & AI Agent Safety Boundary</h2>
+            <p>Automatic opt-out suppression, attachment quarantine, prompt injection defanging, and hot-deal takeover.</p>
+          </div>
+          <div class="inbound-list" id="inbound-messages-list">
+            <!-- Dynamically populated -->
+          </div>
+        </section>
+
+        <!-- View 6: Recommendations & Analytics -->
+        <section id="tab-recommendations" class="view-panel">
+          <div class="view-header">
+            <h2>Recommendation-Only Learning Engine</h2>
+            <p>Pattern-discovered strategic recommendations. Strict Invariant: Zero silent mutations to active campaigns.</p>
+          </div>
+          <div class="recommendations-container" id="recommendations-list">
+            <!-- Dynamically populated -->
+          </div>
+        </section>
+
+      </main>
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal-overlay hidden">
+      <div class="modal-card glass-panel">
+        <div class="modal-header">
+          <h3>Sign In to Mission Control</h3>
+          <button id="close-login-btn" class="btn-close" style="background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer;">&times;</button>
+        </div>
+        <form id="login-form">
+          <div class="form-group" style="margin-bottom:1rem;">
+            <label for="login-email" style="display:block; margin-bottom:0.4rem; font-size:0.85rem; color:#94a3b8;">Email Address</label>
+            <input type="email" id="login-email" class="form-control" style="width:100%; padding:0.6rem; border-radius:6px; background:#1e293b; border:1px solid #334155; color:#fff;" placeholder="admin@omni.com" required value="admin@omni.com">
+          </div>
+          <div class="form-group" style="margin-bottom:1.5rem;">
+            <label for="login-password" style="display:block; margin-bottom:0.4rem; font-size:0.85rem; color:#94a3b8;">Password</label>
+            <input type="password" id="login-password" class="form-control" style="width:100%; padding:0.6rem; border-radius:6px; background:#1e293b; border:1px solid #334155; color:#fff;" placeholder="AdminPass123!" required value="AdminPass123!">
+          </div>
+          <div id="login-error-msg" class="error-msg" style="color:#ef4444; font-size:0.85rem; margin-bottom:1rem; display:none;"></div>
+          <div class="modal-actions" style="display:flex; justify-content:flex-end;">
+            <button type="submit" class="btn btn-primary" style="padding:0.6rem 1.5rem;">Sign In</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
